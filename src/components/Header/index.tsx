@@ -3,15 +3,16 @@ import React from "react";
 import * as S from "./style";
 
 import Logo from '../../assets/logo.png';
+import Menu from '../../assets/menu.png';
+import { RectButton } from "react-native-gesture-handler";
 
 const Header = () => {
     return (
         <S.HeaderStyle>
-            <S.Logo source={ Logo }/>
-            <S.LinksContainer>
-                <S.Links className="black">Meu Perfil</S.Links>
-                <S.Links className="white">Sair</S.Links>
-            </S.LinksContainer>
+            <RectButton>
+                <S.Logo source={ Menu } />
+            </RectButton>
+            <S.Logo source={ Logo } />
         </S.HeaderStyle>
     )
 }

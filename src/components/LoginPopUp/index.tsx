@@ -33,7 +33,7 @@ const LoginPopUp: React.FC<LoginPopUpProps> = ({  onClose, children }) => {
         {(email.length > 0 && password.length > 0) && setMensagemVazio(false)}
         console.log("oi");
         login(email, password);
-        {(!user && email.length > 0 && password.length > 0) && setMensagemErro(true)}
+        {(!user) && setMensagemErro(true)}
 
 
     }, [login, email, password]);
